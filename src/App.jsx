@@ -2,6 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import TodoList from './TodoList'
+
+const TodoList = [
+  { id: 1, title: "Complete Your task" },
+  { id: 2, title: "Buy a book" },
+  { id: 3, title: "Go for a walk" },
+];
 
 function App() {
   const [count, setCount] = useState(0)

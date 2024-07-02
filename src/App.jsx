@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import viteLogo from './vite.svg'; 
 import './App.css';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
 
 function App() {
+  const [newTodo, setNewTodo] = useState('');
+
+  const handleAddTodo = (todoTitle) => {
+    setNewTodo(todoTitle);
+  };
+
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -25,8 +31,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <TodoList /> {}
-      <AddTodoForm />{}
+      <TodoList />
+      <AddTodoForm onAddTodo={handleAddTodo} />
+      <p>New Todo: {newTodo}</p>
     </>
   );
 }

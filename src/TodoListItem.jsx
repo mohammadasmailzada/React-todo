@@ -1,7 +1,4 @@
 import React from 'react';
-function TodoListItem(props) {
-    const { item } = props;
-}
 
 function TodoListItem({ item }) {
 const myArray = ['apple', 'banana', 'orange'];
@@ -16,3 +13,4 @@ const myArray = ['apple', 'banana', 'orange'];
   );
 }
 
+export default TodoListItem

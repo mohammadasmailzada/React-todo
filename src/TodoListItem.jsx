@@ -1,16 +1,7 @@
 import React from 'react';
 
-function TodoListItem({ item }) {
-const myArray = ['apple', 'banana', 'orange'];
+const TodoListItem = ({ item }) => {
+  return <li>{item.title}</li>;
+};
 
-  return (
-    <ul>
-      {item.text}
-      <li key={item.id}>{item.title}</li>
-      const myArray = ['apple', 'banana', 'orange'];
-
-    </ul>
-  );
-}
-
-export default TodoListItem
+export default TodoListItem;
